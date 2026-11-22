@@ -1,0 +1,42 @@
+# Personnes étudiantes actuelles.
+# Champs : name, initials, level (phd ou msc), project (dans sa langue d'origine) ; optionnel : codirection
+- name: Victoria Valentin
+  initials: VV
+  level: phd
+  project: "Analyse des gestes co-verbaux lors de la production du discours : impact de la nature du discours et variation du contexte d’interactions"
+  codirection: Pre Véronique Boulenger (Université Lyon 2)
+
+- name: Daphné Lebrun
+  initials: DL
+  level: phd
+  project: "HRVAnomia : effets de la respiration lente et profonde sur les performances langagières chez les personnes âgées neurologiquement saines et des personnes présentant une aphasie"
+  codirection: Pr Guillaume Vallet (UQTR)
+
+- name: Florence Vachon
+  initials: FV
+  level: phd
+  project: "HRVAnomia : effets de la respiration lente et profonde sur les performances langagières chez les personnes âgées neurologiquement saines et des personnes présentant une aphasie"
+  codirection: Pr Guillaume Vallet (UQTR)
+
+- name: Kemisha Sidibe
+  initials: KS
+  level: phd
+  project: "HRVAnomia : effets de sessions de respiration guidée par retour haptique sur la discrimination mnésique de personnes de 55 ans et plus"
+  codirection: Pr Guillaume Vallet (UQTR)
+
+- name: Évelyne Baron
+  initials: ÉB
+  level: phd
+  project: "HRVAnomia : effets de sessions de respiration guidée par retour haptique sur la discrimination mnésique de personnes de 55 ans et plus"
+  codirection: Pr Guillaume Vallet (UQTR)
+
+- name: Daphnée Leclerc
+  initials: DL
+  level: msc
+  project: Liens entre capacité d’empathie et production de gestes co-verbaux lors de tâches discursives
+
+- name: Corinne Duplessis
+  initials: CD
+  level: msc
+  project: Validation d’une grille de cotation du test Mémo pour évaluer les capacités cognitivo-communicationnelles de personnes avec traumatisme cranio-cérébral
+  codirection: Anne-Marie Pauzé, M.P.O.

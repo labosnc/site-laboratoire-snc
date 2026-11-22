@@ -1,0 +1,80 @@
+# Ressources et outils, présentés en cartes.
+# Champs : title, credit ; fr/en { kind, description } ; optionnel : url
+- title: Manuel de référence pour la transcription, le codage et l’analyse dans CLAN des corpus francophones du MACS
+  credit: Zumbansen, Anglade et Durand (2022), Pressbooks
+  fr:
+    kind: Manuel
+    description: Guide pas à pas pour transcrire, coder et analyser des corpus de discours francophones avec le logiciel CLAN.
+  en:
+    kind: Manual
+    description: A step-by-step guide (in French) to transcribing, coding and analysing French-language discourse corpora with the CLAN software.
+
+- title: 237 photographies normalisées pour la dénomination
+  credit: Lefebvre, Turcotte, Ferrand et Durand (2026), Journal of Cognition
+  url: https://doi.org/10.5334/joc.509
+  fr:
+    kind: Banque d’images
+    description: Ensemble de photographies avec normes d’accord sur le nom, établies auprès de locuteurs francophones du Québec et de France, pour l’évaluation et l’intervention en orthophonie.
+  en:
+    kind: Image set
+    description: Photographs with name-agreement norms collected from French speakers in Quebec and France, for assessment and therapy in speech-language pathology.
+
+- title: Assessment of co-speech gestures in adults
+  credit: Durand, Boulenger, Marcotte, Brambati et Ruest (2026), PROSPERO CRD420261326429
+  url: https://www.crd.york.ac.uk/PROSPERO/view/CRD420261326429
+  fr:
+    kind: Protocole de revue systématique
+    description: Protocole enregistré d’une revue systématique des méthodes d’évaluation des gestes co-verbaux chez l’adulte.
+  en:
+    kind: Systematic review protocol
+    description: Registered protocol for a systematic review of how co-speech gestures are assessed in adults.
+
+- title: Optimal testing situations for the automated analysis of cognitive components in natural language
+  credit: Vantwembeke, Durand, Lefebvre et Invernizzi (2025), PROSPERO CRD420251131954
+  url: https://www.crd.york.ac.uk/PROSPERO/view/CRD420251131954
+  fr:
+    kind: Protocole de revue systématique
+    description: Protocole enregistré d’une revue systématique sur les situations de test les plus adaptées à l’analyse automatisée du langage naturel.
+  en:
+    kind: Systematic review protocol
+    description: Registered protocol for a systematic review of the testing situations best suited to the automated analysis of natural language.
+
+- title: "Troubles du langage : comment les gestes nous aident-ils à retrouver nos mots ?"
+  credit: Durand et Valentin (2026), Les Chantiers de la recherche, France Culture
+  url: https://www.radiofrance.fr/franceculture/podcasts/les-chantiers-de-la-recherche/troubles-du-langage-comment-les-gestes-nous-aident-ils-a-retrouver-nos-mots-4641321
+  fr:
+    kind: Balado
+    description: Émission radio grand public sur le rôle des gestes dans la récupération du langage.
+  en:
+    kind: Podcast
+    description: A general-audience radio programme (in French) on the role of gestures in language recovery.
+
+- title: "Analyser le discours : c’est compliqué !"
+  credit: Durand et collaboratrices (2026), Acfas Magazine
+  url: https://www.acfas.ca/publications/magazine/2026/05/analyser-discours-trouble-communication-orthophonie-neuropsychologie
+  fr:
+    kind: Article grand public
+    description: Pourquoi l’analyse du discours est un défi pour l’évaluation des troubles de la communication.
+  en:
+    kind: General-audience article
+    description: Why discourse analysis is a challenge when assessing communication disorders (in French).
+
+- title: "Sensorimotricité, langage et parole : perspectives cliniques de la cognition incarnée et située en orthophonie"
+  credit: Durand (2023), webinaire LURCO, UNADRÉO
+  url: https://www.unadreo.org/2023-webinaire-edith-durand/
+  fr:
+    kind: Webinaire
+    description: Webinaire de formation sur les applications cliniques de la cognition incarnée et située en orthophonie.
+  en:
+    kind: Webinar
+    description: A training webinar (in French) on the clinical applications of embodied and situated cognition in speech-language pathology.
+
+- title: How singing in a choir might help people find their voices after a stroke
+  credit: CBC News (2024)
+  url: https://www.cbc.ca/news/health/singing-aphasia-choir-stroke-9.7000538
+  fr:
+    kind: Média
+    description: Reportage sur le chant choral comme soutien à la communication après un AVC.
+  en:
+    kind: Media
+    description: News story on choir singing as a support for communication after a stroke.

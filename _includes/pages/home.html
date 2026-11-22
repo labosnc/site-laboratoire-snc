@@ -1,0 +1,45 @@
+{% assign t = site.data.i18n[page.lang] %}
+{% assign en = false %}{% if page.lang == "en" %}{% assign en = true %}{% endif %}
+<section class="snc-hero">
+  <div>
+    <h1>{% if en %}SNC<br>Lab{% else %}Laboratoire<br>SNC{% endif %}</h1>
+    <p>{% if en %}Sensorimotricity, Neuroplasticity and Communication Laboratory (SNC), directed by Professor Édith Durand{% else %}Laboratoire Sensorimotricité, Neuroplasticité et Communication (SNC), dirigé par la professeure Édith Durand{% endif %}</p>
+  </div>
+  <img src="{{ '/images/brain-hero.png' | relative_url }}" width="800" height="800" alt="{% if en %}Illustration: profile of a face whose brain branches out like a tree, with speech bubbles, a hand, a mouth and a foot{% else %}Illustration : profil d’un visage dont le cerveau se prolonge en arbre, avec des bulles de parole, une main, une bouche et un pied{% endif %}" fetchpriority="high">
+</section>
+
+<section class="snc-band snc-center" id="a-propos">
+  <h2>{% if en %}About the lab{% else %}À propos du laboratoire{% endif %}</h2>
+  <p class="snc-measure">{% if en %}Affiliated with the Department of Speech-Language Pathology at the Université du Québec à Trois-Rivières (UQTR), we conduct research to better understand communication and the links between sensorimotor processes and language.{% else %}Affilié au Département d’orthophonie de l’Université du Québec à Trois-Rivières (UQTR), nous menons des recherches afin de mieux comprendre la communication et les liens entre sensorimotricité et langage.{% endif %}</p>
+  <p class="snc-links">
+    <a class="btn-snc" href="{{ site.links.department }}">{{ t.department }}</a>
+    <a class="btn-snc btn-snc-outline" href="{{ site.links.facebook }}">{{ t.facebook }}</a>
+  </p>
+  <div class="snc-mission">
+    <img src="{{ '/images/uqtr-logo.png' | relative_url }}" width="800" height="772" alt="{% if en %}Université du Québec à Trois-Rivières logo{% else %}Logo de l’Université du Québec à Trois-Rivières{% endif %}" loading="lazy">
+    <div>
+      <h3>{% if en %}Our mission{% else %}Notre mission{% endif %}</h3>
+      <p>{% if en %}Our projects focus on sensorimotor and language mechanisms, neuroplasticity, and the assessment and rehabilitation of communication. Our team brings together people from research, clinical practice and university teaching in a collaborative, interdisciplinary approach.{% else %}Nos projets portent sur les mécanismes sensorimoteurs et langagiers, la neuroplasticité, ainsi que sur l’évaluation et la réadaptation de la communication. Notre équipe réunit des personnes issues de la recherche, de la clinique et de la formation universitaire dans une approche collaborative et interdisciplinaire.{% endif %}</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>{% if en %}Recent news{% else %}Actualités récentes{% endif %}</h2>
+  {% include news-list.html limit=3 %}
+  <p class="snc-more"><a href="{{ site.data.nav[1][page.lang].url | relative_url }}">{{ t.all_news }} &rarr;</a></p>
+</section>
+
+<section class="snc-section" id="collaborateurs">
+  <h2>{% if en %}Our collaborators{% else %}Nos collaborateurs{% endif %}</h2>
+  <div class="snc-collabs">
+    {% for c in site.data.collaborators %}
+    <div><strong>{{ c.name }}</strong>{% if c.affiliation %}<span>{{ c.affiliation }}</span>{% endif %}</div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="snc-band">
+  <h2>{% if en %}Contact us{% else %}Pour nous contacter{% endif %}</h2>
+  {% include snc-contact.html %}
+</section>

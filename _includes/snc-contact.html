@@ -1,0 +1,15 @@
+{% assign t = site.data.i18n[page.lang] %}
+<div class="snc-contact">
+  <div>
+    <h3>{{ t.email }}</h3>
+    <p><a href="mailto:{{ site.pi_email }}">{{ site.pi_email }}</a><br><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+  </div>
+  <div>
+    <h3>{{ t.address_title }}</h3>
+    <p>{{ t.address | join: "<br>" }}</p>
+  </div>
+  <div>
+    <h3>{{ t.links_title }}</h3>
+    <p><a href="{{ site.links.department }}">{{ t.department }}</a><br><a href="{{ site.links.facebook }}">{{ t.facebook }}</a></p>
+  </div>
+</div>

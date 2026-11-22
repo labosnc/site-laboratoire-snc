@@ -1,0 +1,36 @@
+{% assign lang = page.lang | default: site.lang %}
+{% assign t = site.data.i18n[lang] %}
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <h2 class="footer-heading">{{ t.footer_lab }}</h2>
+      <p>
+        {{ t.site_name }}<br>
+        {{ t.site_title }}<br>
+        <a href="{{ site.links.department }}">{{ t.department }}</a><br>
+        <a href="{{ site.links.facebook }}">{{ t.facebook }}</a>
+      </p>
+    </div>
+    <div>
+      <h2 class="footer-heading">Contact</h2>
+      <p>
+        <a href="mailto:{{ site.email }}">{% include icon.html name="envelope" %} {{ site.email }}</a><br>
+        {{ t.address | join: "<br>" }}
+      </p>
+    </div>
+    <div>
+      <h2 class="footer-heading">{{ t.footer_pages }}</h2>
+      <p>
+        {% for nav in site.data.nav %}<a href="{{ nav[lang].url | relative_url }}">{{ nav[lang].label }}</a><br>{% endfor %}
+      </p>
+    </div>
+  </div>
+  <div class="footer-grid">
+    <div class="footer-copyright" style="grid-column: 1 / -1;">
+      &copy; {{ "now" | date: "%Y" }} {{ t.site_name | escape }}
+    </div>
+  </div>
+</footer>
+
+<script src="{{ '/assets/js/site.js' | relative_url }}"></script>
+{% if page.ref == "team" %}<script src="{{ '/assets/js/table.js' | relative_url }}"></script>{% endif %}

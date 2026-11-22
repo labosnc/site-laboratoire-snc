@@ -1,0 +1,330 @@
+// =============================================================
+// Laboratoire SNC — charte graphique issue de la maquette Canva
+// =============================================================
+
+:root {
+  --snc-pill: #eddfef;
+  --snc-band: #ddd5e5;
+  --snc-magenta: #b52f9a;
+  --snc-rose: #d43d5c;
+  --snc-peach: #b8651b;
+}
+
+body { background-color: var(--bg-primary); }
+
+// Menu : pastilles roses de la maquette
+.navbar-brand { font-size: 1.0625rem; }
+.navbar-nav { gap: var(--space-2); }
+.nav-link {
+  background-color: var(--snc-pill);
+  color: var(--text-primary) !important;
+  font-family: 'Hedvig Letters Serif', Georgia, serif;
+  font-size: 0.875rem;
+  text-align: center;
+  padding: var(--space-1) var(--space-3) !important;
+  white-space: nowrap;
+  &.active::after { display: none; }
+  &.active { background-color: var(--accent); color: #fff !important; }
+}
+
+@media (max-width: 991.98px) {
+  .navbar-nav { padding-top: var(--space-3); }
+}
+
+// Boutons et sections pleine largeur
+.btn-snc {
+  display: inline-block;
+  padding: var(--space-2) var(--space-8);
+  border-radius: var(--radius-md);
+  background-color: var(--accent);
+  color: #fff !important;
+  background-image: none !important;
+  font-family: 'Hedvig Letters Serif', Georgia, serif;
+  transition: background-color var(--transition-fast);
+  &:hover { background-color: var(--accent-hover); }
+}
+
+.snc-band {
+  background: var(--snc-band);
+  box-shadow: 0 0 0 100vmax var(--snc-band);
+  clip-path: inset(0 -100vmax);
+  padding: var(--space-12) 0;
+  margin: var(--space-12) 0;
+  &:last-child { margin-bottom: calc(-1 * var(--space-16)); }
+  p, li { color: var(--text-primary); }
+  a { color: #4c2878; }
+}
+
+.snc-center { text-align: center; }
+.snc-center h1::after, .snc-center h2::after { margin-left: auto; margin-right: auto; }
+.snc-measure { max-width: 46rem; margin-left: auto; margin-right: auto; text-align: center; }
+
+// Accueil
+.snc-hero {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: var(--space-8);
+  align-items: center;
+  text-align: center;
+  padding-top: var(--space-8);
+
+  h1 {
+    font-size: clamp(3rem, 8vw, 5rem);
+    line-height: 1.1;
+    margin: 0 0 var(--space-8);
+    &::after { display: none; }
+  }
+  p { font-size: 1.1875rem; color: var(--text-primary); margin: 0 auto; }
+  img { width: 100%; max-width: 420px; height: auto; margin: 0 auto; display: block; }
+  hr { border-top-color: #b9a9d6; margin: var(--space-4) auto var(--space-6); max-width: 28rem; }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    img { max-width: 280px; grid-row: 1; }
+  }
+}
+
+.snc-mission {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: var(--space-10);
+  align-items: center;
+  max-width: 52rem;
+  margin: var(--space-10) auto 0;
+  img { width: 100%; height: auto; mix-blend-mode: multiply; }
+  h3 { margin-top: 0; text-align: center; }
+  p { max-width: none; }
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+    img { max-width: 200px; margin: 0 auto; }
+  }
+}
+
+// Grille de nouvelles
+.snc-news {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-6);
+}
+.snc-news-item {
+  border-top: 3px solid var(--accent);
+  padding-top: var(--space-3);
+  time { display: block; color: var(--text-muted); font-size: 0.875rem; }
+  p { margin: var(--space-1) 0 0; color: var(--text-primary); }
+}
+
+// Coordonnées
+.snc-contact {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-8);
+  h3 { margin-top: 0; }
+  p { margin: 0; overflow-wrap: anywhere; }
+}
+
+// Tuiles à icône (Actualités, Équipe)
+.snc-tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: var(--space-6);
+  margin: var(--space-10) 0;
+}
+.snc-tile {
+  text-align: center;
+  color: var(--text-primary) !important;
+  background-image: none !important;
+  img { width: 130px; height: 130px; object-fit: contain; display: block; margin: 0 auto var(--space-3); transition: transform var(--transition-base); }
+  span { text-decoration: underline; font-family: 'Hedvig Letters Serif', Georgia, serif; }
+  &:hover img { transform: translateY(-4px); }
+}
+.snc-tile-plain {
+  background: var(--snc-pill);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6) var(--space-4);
+  span { font-size: 1.125rem; }
+}
+
+// Sections d'une page ; années de la maquette en couleur
+.snc-section {
+  scroll-margin-top: 5rem;
+  margin-top: var(--space-12);
+}
+.snc-lede { font-size: 1.0625rem; color: var(--text-secondary); max-width: none; }
+.snc-more { margin-top: var(--space-4); }
+
+// Liste Scholar : sans puces ni numéros
+.bibliography, ol.bibliography { list-style: none; padding-left: 0; }
+.bibliography li { max-width: none; }
+.pub-entry .year-badge { background-color: var(--snc-pill); color: #4c2878; }
+
+// Subventions
+.snc-table-wrap { overflow-x: auto; }
+.snc-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+  th { text-align: left; border-bottom: 2px solid var(--accent); padding: var(--space-2); white-space: nowrap; }
+  td { padding: var(--space-3) var(--space-2); border-bottom: 1px solid var(--border-color); vertical-align: top; color: var(--text-secondary); }
+  .num { text-align: right; white-space: nowrap; }
+}
+
+// Équipe : initiales à défaut de photo
+.snc-avatar {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-3);
+  background: linear-gradient(135deg, #2fb5c9, #7a4fd0 55%, #e0479e);
+  color: #fff;
+  font-family: 'Hedvig Letters Serif', Georgia, serif;
+  font-size: 1.75rem;
+}
+.snc-pi {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: var(--space-8);
+  align-items: start;
+  .snc-avatar { width: 160px; height: 160px; font-size: 3rem; }
+  h3 { color: var(--accent); margin-top: 0; }
+  @media (max-width: 640px) { grid-template-columns: 1fr; }
+}
+.snc-names { color: var(--text-secondary); max-width: none; }
+.snc-collabs {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--space-3) var(--space-6);
+  div strong { display: block; font-weight: 500; }
+  div span { color: var(--text-muted); font-size: 0.875rem; }
+}
+
+// Liens et boutons secondaires
+.snc-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-3);
+  max-width: none;
+  margin: var(--space-6) 0 0;
+}
+.snc-links-left { justify-content: flex-start; }
+.btn-snc-outline {
+  background-color: transparent;
+  color: var(--accent) !important;
+  box-shadow: inset 0 0 0 1.5px var(--accent);
+  &:hover { background-color: var(--accent-light); }
+}
+.snc-band .btn-snc { color: #fff !important; }
+.snc-band .btn-snc-outline { color: #4c2878 !important; }
+
+// Sélecteur de langue
+.snc-lang {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  box-shadow: inset 0 0 0 1px var(--border-color);
+  color: var(--text-secondary) !important;
+  background-image: none !important;
+  &:hover { color: var(--accent) !important; box-shadow: inset 0 0 0 1px var(--accent); }
+}
+
+// Photo et parcours de la directrice
+.snc-pi-photo {
+  width: 100%;
+  max-width: 220px;
+  aspect-ratio: 1;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.snc-pi { grid-template-columns: 220px 1fr; }
+.snc-pi p { max-width: none; }
+.snc-pi-lists {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-6);
+  margin-top: var(--space-6);
+  h4 { margin-top: 0; }
+  ul { padding-left: 1.1rem; font-size: 0.9375rem; }
+}
+@media (max-width: 640px) {
+  .snc-pi { grid-template-columns: 1fr; }
+  .snc-pi-photo { max-width: 180px; margin: 0 auto; }
+}
+
+// Tableau triable et paginé
+.snc-sort {
+  all: unset;
+  cursor: pointer;
+  font-weight: 600;
+  &::after { content: ' \2195'; color: var(--text-muted); font-weight: 400; }
+  &:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+}
+th[aria-sort="ascending"] .snc-sort::after { content: ' \2191'; color: var(--accent); }
+th[aria-sort="descending"] .snc-sort::after { content: ' \2193'; color: var(--accent); }
+.snc-pager {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+  font-size: 0.875rem;
+  button {
+    border: 0;
+    border-radius: var(--radius-md);
+    background: var(--snc-pill);
+    color: var(--text-primary);
+    padding: var(--space-1) var(--space-3);
+    cursor: pointer;
+    &:disabled { opacity: 0.45; cursor: default; }
+  }
+}
+
+// Cartes des ressources
+.snc-page-icon { width: 120px; height: 120px; object-fit: contain; }
+.snc-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-6);
+  margin-top: var(--space-10);
+}
+.snc-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-top: 4px solid var(--accent);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  p { max-width: none; font-size: 0.9375rem; }
+}
+.snc-card-kind {
+  align-self: flex-start;
+  background: var(--snc-pill);
+  color: #4c2878;
+  border-radius: var(--radius-full);
+  padding: 0.125rem var(--space-3);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+.snc-card-title {
+  font-size: 1.125rem;
+  margin: var(--space-3) 0 var(--space-2);
+  &::after { display: none; }
+}
+.snc-card-credit { color: var(--text-muted); font-size: 0.8125rem !important; margin-bottom: var(--space-3); }
+.snc-card-link { margin-top: auto; align-self: flex-start; padding: var(--space-1) var(--space-6); }
+
+// Projets
+.snc-project-meta { font-size: 0.875rem; color: var(--text-muted); margin: var(--space-2) 0 0; }
+
+.snc-empty { text-align: center; padding: var(--space-12) 0; p { margin-left: auto; margin-right: auto; } h1::after { margin-left: auto; margin-right: auto; } }
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .snc-brand-text { display: none; }
+}

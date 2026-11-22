@@ -1,0 +1,85 @@
+# Libellés partagés de l'interface, en français et en anglais.
+fr:
+  other_lang: en
+  other_label: English
+  other_title: Version anglaise
+  site_name: Laboratoire SNC
+  site_title: Sensorimotricité, Neuroplasticité et Communication
+  description: "Laboratoire Sensorimotricité, Neuroplasticité et Communication (SNC), Département d’orthophonie, Université du Québec à Trois-Rivières. Dirigé par la professeure Édith Durand."
+  skip: Aller au contenu
+  menu: Ouvrir le menu
+  search: Rechercher dans le site
+  search_placeholder: Rechercher dans le site...
+  footer_lab: Le laboratoire
+  footer_pages: Pages
+  email: Courriel
+  address_title: Adresse
+  address: ["Département d’orthophonie", "Université du Québec à Trois-Rivières", "3351, boul. des Forges, C.P. 500", "Trois-Rivières (Québec)", "G9A 5H7"]
+  links_title: Liens
+  department: Département d’orthophonie de l’UQTR
+  facebook: Page Facebook du département
+  months: [janvier, février, mars, avril, mai, juin, juillet, août, septembre, octobre, novembre, décembre]
+  roles: { pi: Chercheuse principale, copi: Co-chercheuse principale, collab: Collaboratrice }
+  levels: { phd: Doctorat, msc: Maîtrise }
+  codirection: Codirection
+  year: Année
+  project: Projet
+  funder: Organisme
+  role: Rôle
+  name: Nom
+  period: Période
+  view: Consulter
+  all_news: Toutes les actualités
+  all_pubs: Toutes les publications
+  in_press: Sous presse
+  link: Lien
+  abstract: Résumé
+  copy: Copier
+  table_prev: Précédent
+  table_next: Suivant
+  table_page: Page
+  table_of: sur
+  sort_hint: Cliquer sur un en-tête de colonne pour trier.
+  no_news: Aucune actualité au cours des douze derniers mois.
+en:
+  other_lang: fr
+  other_label: Français
+  other_title: French version
+  site_name: SNC Lab
+  site_title: Sensorimotricity, Neuroplasticity and Communication
+  description: "Sensorimotricity, Neuroplasticity and Communication Laboratory (SNC), Department of Speech-Language Pathology, Université du Québec à Trois-Rivières. Directed by Professor Édith Durand."
+  skip: Skip to content
+  menu: Open menu
+  search: Search the site
+  search_placeholder: Search the site...
+  footer_lab: The lab
+  footer_pages: Pages
+  email: Email
+  address_title: Address
+  address: ["Département d’orthophonie (Speech-Language Pathology)", "Université du Québec à Trois-Rivières", "3351, boul. des Forges, C.P. 500", "Trois-Rivières (Québec)", "G9A 5H7, Canada"]
+  links_title: Links
+  department: UQTR Department of Speech-Language Pathology (in French)
+  facebook: Department Facebook page
+  months: [January, February, March, April, May, June, July, August, September, October, November, December]
+  roles: { pi: Principal investigator, copi: Co-principal investigator, collab: Collaborator }
+  levels: { phd: PhD, msc: Master’s }
+  codirection: Co-supervision
+  year: Year
+  project: Project
+  funder: Funder
+  role: Role
+  name: Name
+  period: Period
+  view: View
+  all_news: All news
+  all_pubs: All publications
+  in_press: In press
+  link: Link
+  abstract: Abstract
+  copy: Copy
+  table_prev: Previous
+  table_next: Next
+  table_page: Page
+  table_of: of
+  sort_hint: Click a column header to sort.
+  no_news: No news in the last twelve months.

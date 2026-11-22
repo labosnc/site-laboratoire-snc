@@ -1,0 +1,33 @@
+{% assign t = site.data.i18n[page.lang] %}
+{% assign lang = page.lang %}
+{% assign en = false %}{% if lang == "en" %}{% assign en = true %}{% endif %}
+<h1>{% if en %}Current projects{% else %}Projets en cours{% endif %}</h1>
+
+<div class="research-grid">
+  {% for p in site.data.projects %}
+  <article class="research-card">
+    <div class="research-body">
+      <h2 class="research-title">{{ p[lang].title }}</h2>
+      <p class="research-desc">{{ p[lang].description }}</p>
+      {% if p.team %}<p class="snc-project-meta"><strong>{% if en %}With:{% else %}Avec :{% endif %}</strong> {{ p.team }}</p>{% endif %}
+      {% if p[lang].funding %}<p class="snc-project-meta"><strong>{% if en %}Funding:{% else %}Financement :{% endif %}</strong> {{ p[lang].funding }}</p>{% endif %}
+      {% if p.url %}<p class="snc-project-meta"><a href="{{ p.url }}">{{ p[lang].link }}</a></p>{% endif %}
+    </div>
+  </article>
+  {% endfor %}
+</div>
+
+<section class="snc-section" id="subventions">
+  <h2>{% if en %}Grants{% else %}Subventions{% endif %}</h2>
+  <p>{% if en %}Grants awarded to the lab’s projects (titles in their original language).{% else %}Subventions obtenues pour les projets du laboratoire.{% endif %}</p>
+  <div class="snc-table-wrap">
+    <table class="snc-table">
+      <thead><tr><th scope="col">{{ t.year }}</th><th scope="col">{{ t.project }}</th><th scope="col">{{ t.funder }}</th><th scope="col">{{ t.role }}</th></tr></thead>
+      <tbody>
+        {% for g in site.data.grants %}
+        <tr><td>{{ g.year }}</td><td>{{ g.title }}</td><td>{{ g.funder }}</td><td>{{ t.roles[g.role] }}</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>

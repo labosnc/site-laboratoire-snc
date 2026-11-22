@@ -1,0 +1,53 @@
+# Actualités, de la plus récente à la plus ancienne.
+# Seules celles de moins d'un an (à la date de compilation) s'affichent ; les 3 premières vont sur l'accueil.
+# Champs : date (AAAA-MM-JJ), fr, en ; optionnels : url, year_only: true (n'affiche que l'année)
+- date: 2026-10-16
+  fr: "Affiche au SingWell Symposium 2026 (Toronto Metropolitan University) : mise à jour de l’essai SingWell Aphasia Multisite"
+  en: "Poster at the SingWell Symposium 2026 (Toronto Metropolitan University): an update on the SingWell Aphasia Multisite trial"
+
+- date: 2026-10-12
+  fr: "Présentation à la 2e Journée scientifique inter-laboratoires DDL–LPL (Université Lumière Lyon 2) sur les gestes co-verbaux chez les personnes âgées"
+  en: "Talk at the 2nd DDL–LPL inter-laboratory scientific day (Université Lumière Lyon 2) on co-speech gestures in older adults"
+
+- date: 2026-09-18
+  fr: "Trois présentations à la Journée scientifique du groupe CogNAC, dont la détection automatique des gestes co-verbaux par intelligence artificielle"
+  en: "Three presentations at the CogNAC group’s scientific day, including the automatic detection of co-speech gestures with artificial intelligence"
+
+- date: 2026-07-01
+  fr: "Article dans Journal of Cognition : un ensemble de 237 photographies normalisées auprès de locuteurs francophones du Québec et de France"
+  en: "Paper in Journal of Cognition: a set of 237 standardized photographs normed with French speakers in Quebec and France"
+  url: https://doi.org/10.5334/joc.509
+
+- date: 2026-06-15
+  fr: "Émission Les Chantiers de la recherche (France Culture) : « Troubles du langage : comment les gestes nous aident-ils à retrouver nos mots ? »"
+  en: "France Culture radio programme Les Chantiers de la recherche: how gestures help us find our words in language disorders"
+  url: https://www.radiofrance.fr/franceculture/podcasts/les-chantiers-de-la-recherche/troubles-du-langage-comment-les-gestes-nous-aident-ils-a-retrouver-nos-mots-4641321
+
+- date: 2026-06-01
+  fr: "Article dans Brain Sciences : effets de la thérapie POEM en téléorthophonie dans l’aphasie primaire progressive logopénique"
+  en: "Paper in Brain Sciences: effects of POEM therapy delivered by telepractice in logopenic primary progressive aphasia"
+  url: https://doi.org/10.3390/brainsci16060653
+
+- date: 2026-05-20
+  fr: "Article dans Acfas Magazine : « Analyser le discours : c’est compliqué ! »"
+  en: "Article in Acfas Magazine on the challenges of discourse analysis"
+  url: https://www.acfas.ca/publications/magazine/2026/05/analyser-discours-trouble-communication-orthophonie-neuropsychologie
+
+- date: 2026-05-11
+  fr: "Présentations au 93e congrès de l’Acfas : gestes co-verbaux, vibration musculo-tendineuse et verbes d’action"
+  en: "Presentations at the 93rd Acfas congress: co-speech gestures, muscle-tendon vibration and action verbs"
+
+- date: 2026-05-01
+  year_only: true
+  fr: "Obtention d’une chaire de recherche Émergence de l’UQTR sur les liens entre sensorimotricité et langage"
+  en: "Award of a UQTR Emergence research chair on the links between sensorimotor processes and language"
+
+- date: 2025-06-01
+  year_only: true
+  fr: "Subvention du CRSH pour le projet « Joindre le geste à la parole », une exploration interculturelle des gestes co-verbaux chez les personnes âgées au Québec et en France"
+  en: "SSHRC grant for the project Joindre le geste à la parole, a cross-cultural study of co-speech gestures in older adults in Quebec and France"
+
+- date: 2024-12-01
+  fr: "Édith Durand s’exprime sur CBC News au sujet des effets du chant choral après un AVC"
+  en: "Édith Durand speaks to CBC News about choir singing after a stroke"
+  url: https://www.cbc.ca/news/health/singing-aphasia-choir-stroke-9.7000538

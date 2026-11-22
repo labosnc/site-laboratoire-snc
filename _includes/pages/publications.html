@@ -1,0 +1,29 @@
+{% assign en = false %}{% if page.lang == "en" %}{% assign en = true %}{% endif %}
+<h1>Publications</h1>
+
+<input type="text" class="pub-search" id="pubSearch" placeholder="{% if en %}Filter by title, author or year...{% else %}Filtrer par titre, auteur ou année...{% endif %}" aria-label="{% if en %}Filter publications{% else %}Filtrer les publications{% endif %}">
+
+<div id="pubList">
+  <h2 id="articles">Articles</h2>
+  <p>{% if en %}Papers in peer-reviewed journals.{% else %}Publications dans des revues avec comité de pairs.{% endif %}</p>
+  {% bibliography --query @article[category=article] %}
+  {% bibliography --query @*[category=souspresse] %}
+
+  <h2 id="chapitres">{% if en %}Book chapters{% else %}Chapitres de livres{% endif %}</h2>
+  {% bibliography --query @incollection[category=chapitre] %}
+
+  <h2 id="communications">{% if en %}Invited talks{% else %}Conférences invitées{% endif %}</h2>
+  {% bibliography --query @inproceedings[category=invitee] %}
+
+  <h2>{% if en %}Oral presentations{% else %}Communications orales{% endif %}</h2>
+  {% bibliography --query @inproceedings[category=orale] %}
+  {% bibliography --query @inproceedings[category=communication] %}
+
+  <h2>{% if en %}Posters{% else %}Affiches{% endif %}</h2>
+  {% bibliography --query @inproceedings[category=affiche] %}
+
+  <h2>{% if en %}Outreach and resources{% else %}Vulgarisation et ressources{% endif %}</h2>
+  {% bibliography --query @*[category=vulgarisation] %}
+  {% bibliography --query @*[category=ressource] %}
+  {% bibliography --query @*[category=protocole] %}
+</div>

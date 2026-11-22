@@ -1,0 +1,24 @@
+{% comment %}
+  News items dated within the twelve months before the build.
+  Parameters: limit (optional).
+{% endcomment %}
+{% assign lang = page.lang %}
+{% assign t = site.data.i18n[lang] %}
+{% assign cutoff = site.time | date: "%s" | minus: 31536000 %}
+{% assign shown = 0 %}
+<div class="snc-news">
+  {% for item in site.data.news %}
+  {% assign when = item.date | date: "%s" | plus: 0 %}
+  {% if when >= cutoff %}
+  {% if include.limit == nil or shown < include.limit %}
+  {% assign shown = shown | plus: 1 %}
+  {% assign m = item.date | date: "%-m" | minus: 1 %}
+  <div class="snc-news-item">
+    <time datetime="{{ item.date | date: '%Y-%m-%d' }}">{% unless item.year_only %}{{ t.months[m] | capitalize }} {% endunless %}{{ item.date | date: "%Y" }}</time>
+    <p>{% if item.url %}<a href="{{ item.url }}">{{ item[lang] }}</a>{% else %}{{ item[lang] }}{% endif %}</p>
+  </div>
+  {% endif %}
+  {% endif %}
+  {% endfor %}
+</div>
+{% if shown == 0 %}<p>{{ t.no_news }}</p>{% endif %}

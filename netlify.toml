@@ -1,0 +1,12 @@
+[build]
+  publish = "_site"
+  command = "echo \"url: ${URL}\" > _config_netlify.yml && bundle exec jekyll build --config _config.yml,_config_netlify.yml"
+
+[build.environment]
+  JEKYLL_ENV = "production"
+  RUBY_VERSION = "3.3.6"
+
+[[headers]]
+  for = "/assets/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

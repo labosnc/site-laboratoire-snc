@@ -1,0 +1,43 @@
+{% assign lang = page.lang | default: site.lang %}
+{% assign t = site.data.i18n[lang] %}
+{% assign alt = site.pages | where: "ref", page.ref | where: "lang", t.other_lang | first %}
+{% assign other_home = site.data.nav[0][t.other_lang].url %}
+<nav class="navbar sticky-top navbar-expand-lg">
+  <div class="container" style="max-width: var(--container-max);">
+    <a class="navbar-brand" href="{{ site.data.nav[0][lang].url | relative_url }}">
+      <img src="{{ '/images/favicon.png' | relative_url }}" width="30" height="30" class="d-inline-block" alt="">
+      <span class="snc-brand-text">{{ t.site_name | escape }}</span>
+    </a>
+    <button class="navbar-toggler" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="{{ t.menu }}">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        {% for nav in site.data.nav %}
+        <li class="nav-item">
+          <a class="nav-link{% if page.ref == nav.ref %} active{% endif %}" href="{{ nav[lang].url | relative_url }}"{% if page.ref == nav.ref %} aria-current="page"{% endif %}>{{ nav[lang].label }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+      <div class="d-flex align-items-center" style="gap: var(--space-2);">
+        <a class="snc-lang" href="{% if alt %}{{ alt.url | relative_url }}{% else %}{{ other_home | relative_url }}{% endif %}" hreflang="{{ t.other_lang }}" lang="{{ t.other_lang }}" title="{{ t.other_title }}">{{ t.other_label }}</a>
+        <button class="search-toggle" id="searchToggle" aria-label="{{ t.search }}">
+          {% include icon.html name="search" %}
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Search overlay -->
+<div class="search-overlay" id="searchOverlay">
+<div class="search-modal">
+<div class="search-input-wrapper">
+{% include icon.html name="search" class="search-input-icon" %}
+<input type="text" class="search-input" id="searchInput" placeholder="{{ t.search_placeholder }}" autocomplete="off">
+<kbd class="search-kbd">ESC</kbd>
+</div>
+<div class="search-results" id="searchResults"></div>
+</div>
+</div>

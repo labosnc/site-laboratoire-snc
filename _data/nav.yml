@@ -1,0 +1,22 @@
+# Menu, dans l'ordre. `ref` relie la page française à sa traduction anglaise.
+- ref: home
+  fr: { label: Accueil, url: / }
+  en: { label: Home, url: /en/ }
+- ref: news
+  fr: { label: Actualités, url: /actualites/ }
+  en: { label: News, url: /en/news/ }
+- ref: team
+  fr: { label: Équipe, url: /equipe/ }
+  en: { label: Team, url: /en/team/ }
+- ref: pubs
+  fr: { label: Publications, url: /publications/ }
+  en: { label: Publications, url: /en/publications/ }
+- ref: projects
+  fr: { label: Projets en cours, url: /projets/ }
+  en: { label: Current projects, url: /en/projects/ }
+- ref: tools
+  fr: { label: Ressources, url: /ressources/ }
+  en: { label: Resources, url: /en/resources/ }
+- ref: contact
+  fr: { label: Contact, url: /contact/ }
+  en: { label: Contact, url: /en/contact/ }

@@ -1,0 +1,20 @@
+{% assign t = site.data.i18n[page.lang] %}
+{% assign lang = page.lang %}
+{% assign en = false %}{% if lang == "en" %}{% assign en = true %}{% endif %}
+<div class="snc-center">
+  <img class="snc-page-icon" src="{{ '/images/actu/ressources.png' | relative_url }}" alt="" width="200" height="200">
+  <h1>{% if en %}Resources and tools{% else %}Ressources et outils{% endif %}</h1>
+  <p class="snc-measure">{% if en %}Tools, registered protocols and general-audience content produced by the lab.{% else %}Outils, protocoles enregistrés et contenus grand public produits par le laboratoire.{% endif %}</p>
+</div>
+
+<div class="snc-cards">
+  {% for r in site.data.tools %}
+  <article class="snc-card">
+    <span class="snc-card-kind">{{ r[lang].kind }}</span>
+    <h2 class="snc-card-title">{{ r.title }}</h2>
+    <p class="snc-card-credit">{{ r.credit }}</p>
+    <p>{{ r[lang].description }}</p>
+    {% if r.url %}<a class="btn-snc snc-card-link" href="{{ r.url }}">{{ t.view }}</a>{% endif %}
+  </article>
+  {% endfor %}
+</div>

@@ -1,0 +1,66 @@
+# Projets en cours. Champs : fr/en { title, description }, team ; optionnels : fr/en funding, url, fr/en link
+- team: Véronique Boulenger, Karine Marcotte, Simona Maria Brambati, François Nougarou
+  url: https://www.crd.york.ac.uk/PROSPERO/view/CRD420261326429
+  fr:
+    title: Gestes co-verbaux et vieillissement
+    description: Exploration interculturelle des gestes qui accompagnent la parole chez les personnes âgées au Québec et en France, avec une détection des gestes assistée par intelligence artificielle au service de l’orthophonie.
+    funding: CRSH, Université Lyon 2, UQTR
+    link: Revue systématique enregistrée sur PROSPERO
+  en:
+    title: Co-speech gestures and ageing
+    description: A cross-cultural study of the gestures that accompany speech in older adults in Quebec and France, with AI-assisted gesture detection for speech-language pathology.
+    funding: SSHRC, Université Lyon 2, UQTR
+    link: Systematic review registered on PROSPERO
+
+- team: François Nougarou, Louis-David Beaulieu
+  fr:
+    title: Illusion motrice et verbes d’action
+    description: Étude des effets de la vibration musculo-tendineuse sur le traitement sémantique des verbes d’action chez des adultes jeunes et âgés, en vue de soutenir la récupération après un AVC.
+    funding: Groupe de recherche CogNAC (UQTR), Fondation UQTR
+  en:
+    title: Motor illusion and action verbs
+    description: How muscle-tendon vibration affects the semantic processing of action verbs in younger and older adults, with a view to supporting recovery after stroke.
+    funding: CogNAC research group (UQTR), UQTR Foundation
+
+- team: Guillaume T. Vallet
+  fr:
+    title: HRVAnomia
+    description: Effets de la respiration lente et profonde, guidée par biofeedback haptique, et de la variabilité de la fréquence cardiaque sur la dénomination et la fluence verbale, chez des personnes sans lésion neurologique et des personnes avec aphasie.
+    funding: Groupe de recherche CogNAC (UQTR)
+  en:
+    title: HRVAnomia
+    description: Effects of slow, deep breathing guided by haptic biofeedback, and of heart rate variability, on naming and verbal fluency in people without neurological damage and people with aphasia.
+    funding: CogNAC research group (UQTR)
+
+- team: Anna Zumbansen, Carole Anglade, Frank A. Russo
+  url: https://clinicaltrials.gov/study/NCT06368323
+  fr:
+    title: Chant choral et aphasie (SingWell)
+    description: Essai randomisé multicentrique sur les effets du chant choral communautaire chez les personnes vivant avec une aphasie post-AVC chronique.
+    funding: CRSH (partenariat SingWell)
+    link: Essai NCT06368323
+  en:
+    title: Choir singing and aphasia (SingWell)
+    description: A multicentre randomized trial of community choir singing for people living with chronic post-stroke aphasia.
+    funding: SSHRC (SingWell partnership)
+    link: Trial NCT06368323
+
+- team: Pascale Tremblay
+  fr:
+    title: Intégration multimodale de la parole
+    description: Rôle des sulcus temporaux supérieurs dans l’imitation de la parole, et effets de la complexité phonologique et de la modalité de présentation sur la production et la perception de la parole dans le vieillissement.
+    funding: Réseau de bio-imagerie du Québec
+  en:
+    title: Multimodal speech integration
+    description: The role of the superior temporal sulci in speech imitation, and how phonological complexity and presentation modality affect speech production and perception in ageing.
+    funding: Quebec Bio-Imaging Network
+
+- team: Guillaume T. Vallet, Benjamin Boller, Mélanie Levasseur, Thomas Tannou
+  fr:
+    title: Sous le regard du personnel soignant
+    description: Intersectionnalité de l’âgisme et du sexisme sur l’attention visuelle du personnel soignant.
+    funding: Réseau québécois de recherche sur le vieillissement (RQRV)
+  en:
+    title: Through the eyes of care staff
+    description: How ageism and sexism intersect in the visual attention of healthcare staff.
+    funding: Quebec Network for Research on Aging (RQRV)

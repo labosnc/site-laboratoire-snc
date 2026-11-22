@@ -1,0 +1,107 @@
+# Subventions obtenues (source : dossier d'évaluation). Montants volontairement omis.
+# role : pi, copi ou collab (libellés traduits dans _data/i18n.yml)
+- year: 2026
+  title: 'Chaire de recherche Émergence : liens entre sensorimotricité et langage'
+  funder: UQTR
+  role: pi
+- year: 2026
+  title: 'Quand les gestes parlent : identification des gestes co-verbaux assistée
+    par intelligence artificielle au service de l’orthophonie auprès des aînés'
+  funder: UQTR
+  role: pi
+- year: 2026
+  title: 'Soutenir les populations en situation de vulnérabilité subissant les conséquences
+    des aléas climatiques : explorer les mesures d’adaptation à déployer par les professionnel·les
+    de la santé'
+  funder: UQTR
+  role: copi
+- year: 2026
+  title: Équipement pour l’étude des gestes co-verbaux chez les aînés
+  funder: UQTR, budget MAO
+  role: pi
+- year: 2025
+  title: 'Effets du vieillissement sur les capacités de lecture de mots selon leur
+    dominance perceptuelle : une étude en imagerie optique'
+  funder: Groupe de recherche CogNAC, UQTR
+  role: copi
+- year: 2025
+  title: 'GestCom: Gestes et communication au cours du vieillissement: une étude comparative
+    France-Québec'
+  funder: Université Lyon 2 (APPI)
+  role: copi
+- year: 2025
+  title: 'HRVAnomia: Utilisation de biofeedback haptique pour la mesure des effets
+    de la respiration lente et profonde sur la fluence verbale'
+  funder: Groupe de recherche CogNAC, UQTR
+  role: copi
+- year: 2025
+  title: 'Joindre le geste à la parole: une exploration interculturelle des gestes
+    co-verbaux chez les personnes âgées au Québec et en France'
+  funder: CRSH
+  role: pi
+- year: 2025
+  title: 'Organisation d’un colloque (octobre 2025) : « Cognition incarnée et située
+    : applications en santé »'
+  funder: UQTR
+  role: pi
+- year: 2025
+  title: Partenariat francophone canadien pour la recherche et la formation en psychologie
+    et en orthophonie
+  funder: UQTR, planification stratégique
+  role: copi
+- year: 2025
+  title: 'Sous le regard du personnel soignant : Intersectionnalité de l’âgisme et
+    du sexisme sur l’attention visuelle'
+  funder: Réseau québécois de recherche sur le vieillissement (RQRV)
+  role: copi
+- year: 2024
+  title: 'Gestes co-verbaux et discours : étude comparative des profils de production
+    de personnes neurotypiques vs présentant une aphasie, au Québec et en France'
+  funder: UQTR, programme PAIR
+  role: pi
+- year: 2024
+  title: 'HRVAnomia: Variabilité de la fréquence cardiaque sur les capacités de dénomination
+    chez des personnes sans lésion neurologique et des personnes avec aphasie'
+  funder: Groupe de recherche CogNAC, UQTR
+  role: copi
+- year: 2024
+  title: Musicothérapie et cafés-rencontres en soutien à la proche aidance de personnes
+    présentant une aphasie
+  funder: Ministère de la Santé et des Services sociaux (Plan d’action pour les personnes
+    proches aidantes)
+  role: collab
+- year: 2024
+  title: 'Organisation d’un colloque au 91e congrès de l’Acfas (Ottawa, mai 2024)
+    : « Cognition incarnée et située : applications en santé »'
+  funder: UQTR, Fonds d’animation et de diffusion de la recherche
+  role: pi
+- year: 2024
+  title: 'Synergie motrice et verbale : Maximiser la récupération post-AVC grâce à
+    l’illusion de mouvement (Grant: Fondation UQTR). '
+  funder: Fondation UQTR
+  role: pi
+- year: 2024
+  title: Traqueur oculaire Spark et logiciel E-Prime
+  funder: UQTR, budget MAO
+  role: copi
+- year: 2024
+  title: Étude des effets de l'illusion motrice sur la dénomination d'actions
+  funder: Groupe de recherche CogNAC, UQTR
+  role: pi
+- year: 2023
+  title: Animation de la Journée scientifique du département d'orthophonie
+  funder: UQTR, Fonds d’animation et de diffusion de la recherche
+  role: pi
+- year: 2022
+  title: Fonds de démarrage de la recherche
+  funder: UQTR
+  role: pi
+- year: 2022
+  title: 'Group singing to support social well-being and communication in adults with
+    communication disorders: A knowledge generation and mobilization partnership (SingWell)'
+  funder: CRSH
+  role: copi
+- year: 2022
+  title: Rôle des sulcus temporaux supérieurs dans l'imitation de la parole
+  funder: Réseau de bio-imagerie du Québec
+  role: copi

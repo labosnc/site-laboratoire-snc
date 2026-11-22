@@ -1,0 +1,68 @@
+{% assign t = site.data.i18n[page.lang] %}
+{% assign pi = site.data.pi[page.lang] %}
+{% assign en = false %}{% if page.lang == "en" %}{% assign en = true %}{% endif %}
+<div class="snc-center"><h1>{% if en %}Our team{% else %}Notre équipe{% endif %}</h1></div>
+
+<nav class="snc-tiles" aria-label="{% if en %}Team sections{% else %}Rubriques de l’équipe{% endif %}">
+  <a class="snc-tile snc-tile-plain" href="#direction"><span>Édith Durand</span></a>
+  <a class="snc-tile snc-tile-plain" href="#etudiants"><span>{% if en %}Students{% else %}Étudiants{% endif %}</span></a>
+  <a class="snc-tile snc-tile-plain" href="#alumni"><span>Alumni</span></a>
+</nav>
+
+<section class="snc-section snc-pi" id="direction">
+  <img class="snc-pi-photo" src="{{ '/images/edith-durand.jpg' | relative_url }}" width="640" height="640" alt="Édith Durand">
+  <div>
+    <h3>Édith Durand</h3>
+    <p>{{ pi.role }}</p>
+    <p>{{ pi.interests }}</p>
+    <p><strong>{% if en %}Keywords:{% else %}Mots-clés :{% endif %}</strong> {{ pi.keywords }}</p>
+    <p class="snc-links snc-links-left">
+      <a class="btn-snc" href="{{ site.cv_file | prepend: '/' | relative_url }}" download>{{ pi.cv }}</a>
+      <a class="btn-snc btn-snc-outline" href="mailto:{{ site.pi_email }}">{{ site.pi_email }}</a>
+    </p>
+    <div class="snc-pi-lists">
+      <div>
+        <h4>{{ pi.education_title }}</h4>
+        <ul>{% for e in pi.education %}<li>{{ e }}</li>{% endfor %}</ul>
+      </div>
+      <div>
+        <h4>{{ pi.awards_title }}</h4>
+        <ul>{% for a in pi.awards %}<li>{{ a }}</li>{% endfor %}</ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="snc-section" id="etudiants">
+  <h2>{% if en %}Students{% else %}Étudiants{% endif %}</h2>
+  {% assign groups = site.data.team_members | group_by: "level" %}
+  {% for group in groups %}
+  <h3>{{ t.levels[group.name] }}</h3>
+  <div class="team-grid">
+    {% for m in group.items %}
+    <div class="team-card">
+      <div class="snc-avatar" aria-hidden="true">{{ m.initials }}</div>
+      <h4 class="team-name">{{ m.name }}</h4>
+      <p class="team-info">{{ m.project }}{% if m.codirection %}<br><em>{{ t.codirection }} : {{ m.codirection }}</em>{% endif %}</p>
+    </div>
+    {% endfor %}
+  </div>
+  {% endfor %}
+</section>
+
+<section class="snc-section" id="alumni">
+  <h2>{% if en %}Former members{% else %}Anciens membres{% endif %}</h2>
+  <p class="text-muted">{{ t.sort_hint }}</p>
+  <div class="snc-table-wrap">
+    <table class="snc-table" data-sortable data-page-size="10" data-prev="{{ t.table_prev }}" data-next="{{ t.table_next }}" data-page="{{ t.table_page }}" data-of="{{ t.table_of }}" data-lang="{{ page.lang }}">
+      <thead><tr><th scope="col">{{ t.name }}</th><th scope="col">{{ t.period }}</th><th scope="col">{{ t.project }}</th></tr></thead>
+      <tbody>
+        {% for m in site.data.alumni %}
+        <tr><td>{{ m.name }}</td><td>{{ m.duration }}</td><td>{{ m.info }}</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <h3>{% if en %}Research assistants and professionals{% else %}Assistants et professionnels de recherche{% endif %}</h3>
+  <p class="snc-names">{{ site.data.assistants | join: " · " }}</p>
+</section>

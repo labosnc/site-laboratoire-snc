@@ -1,0 +1,102 @@
+# ============================================================
+# Identité du laboratoire (textes traduits : _data/i18n.yml)
+# ============================================================
+name: "Laboratoire SNC"
+title: "Sensorimotricité, Neuroplasticité et Communication"
+institution: "Université du Québec à Trois-Rivières"
+email: SNC@uqtr.ca
+pi_email: edith.durand@uqtr.ca
+photo: brain-hero.png
+lang: fr
+cv_file: files/CV_Edith_Durand.pdf
+
+# Liens (laisser vide pour masquer)
+links:
+  department: "https://oraprdnt.uqtr.uquebec.ca/portail/gscw030?owa_no_site=346"
+  facebook: "https://www.facebook.com/OrthophonieUQTR/"
+  google_scholar: ""
+  researchgate: ""
+  orcid: ""
+  linkedin: ""
+
+# ============================================================
+# Réglages du site
+# ============================================================
+accent_color: "#6a3fa0"
+dark_mode: false
+math: false
+description: "Laboratoire Sensorimotricité, Neuroplasticité et Communication (SNC), Département d’orthophonie, Université du Québec à Trois-Rivières. Dirigé par la professeure Édith Durand."
+
+# Netlify renseigne `url` au moment du build (voir netlify.toml).
+url: ""
+baseurl: ""
+
+analytics:
+  google_id: ""
+  plausible_domain: ""
+  umami_website_id: ""
+  umami_src: ""
+  goatcounter: ""
+
+# ============================================================
+# Publications (assets/ref.bib)
+# ============================================================
+scholar:
+  last_name: Durand
+  first_name: ["É."]
+  style: citesty
+  locale: fr
+  source: /assets/
+  bibliography: ref.bib
+  bibliography_template: bibtemplate
+  sort_by: year, month
+  order: descending
+  replace_strings: true
+  join_strings: true
+  query: "@*"
+  bibliography_list_attributes:
+    reversed: "reversed"
+  bibtex_skip_fields: [abstract, month_numeric, file, selected, code, slides, video, poster, data, category, ym]
+
+# ============================================================
+# Réglages avancés
+# ============================================================
+permalink: /blog/:year/:title/
+
+include:
+  - _pages
+
+sass:
+  style: compressed
+  quiet_deps: true
+  silence_deprecations: [import]
+  sourcemap: development
+
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+  parse_block_html: true
+
+plugins: ["jekyll/scholar", "jekyll-sitemap"]
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
+  - netlify.toml
+  - vendor
+  - .bundle
+  - node_modules
