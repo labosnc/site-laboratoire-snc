@@ -47,6 +47,16 @@ bundle install
 bundle exec jekyll serve
 ```
 
+## Mise en ligne sur GitHub Pages (solution actuelle)
+
+Le fichier `.github/workflows/pages.yml` compile et publie le site à chaque `git push` sur `main`,
+ainsi que chaque lundi (pour retirer les actualités de plus d'un an). On peut aussi le relancer à la main :
+*Actions > Publier sur GitHub Pages > Run workflow*.
+Réglage fait une seule fois : *Settings > Pages > Source : GitHub Actions*.
+
+Adresse : https://labosnc.github.io/site-laboratoire-snc/, ou le domaine personnalisé une fois configuré dans
+*Settings > Pages > Custom domain*. L'adresse et le sous-chemin sont fournis automatiquement par GitHub.
+
 ## Mise en ligne sur Netlify
 
 Dans Netlify, choisir *Add new site > Import an existing project*, puis ce dépôt GitHub.
