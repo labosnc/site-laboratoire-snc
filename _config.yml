@@ -102,3 +102,6 @@ exclude:
   - .bundle
   - node_modules
   - files/CV_Edith_Durand.pdf
+  - scripts
+  - mettre-a-jour-windows.bat
+  - mettre-a-jour-macos.command

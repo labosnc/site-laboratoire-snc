@@ -31,6 +31,37 @@ Dans `assets/ref.bib`, le champ `category` choisit la section de chaque entrée 
 `chapitre`, `invitee`, `orale`, `communication`, `affiche`, `vulgarisation`, `ressource` ou `protocole`.
 Le champ `ym` (année × 100 + mois, par exemple `202609`) sert au filtre « moins d'un an » de la page Actualités.
 
+## Mise à jour depuis le fichier Excel
+
+Le script `scripts/mettre-a-jour.rb` relit le dossier d'évaluation (Excel), régénère les **subventions**
+(`_data/grants.yml`, sans les montants) et les **publications et présentations** (`assets/ref.bib`, qui alimentent
+aussi la page Actualités), affiche ce qui a changé, puis, après confirmation, fait le commit, l'envoie sur GitHub
+et suit le déploiement jusqu'à la mise en ligne.
+
+- **Windows :** double-cliquer sur `mettre-a-jour-windows.bat`, ou glisser le fichier Excel sur ce fichier.
+- **macOS :** double-cliquer sur `mettre-a-jour-macos.command` (la première fois : clic droit > *Ouvrir*), puis glisser
+  le fichier Excel dans la fenêtre du Terminal.
+- **Ligne de commande :** `ruby scripts/mettre-a-jour.rb chemin/du/fichier.xlsx` ; `--oui` publie sans confirmation,
+  `--sans-publier` régénère seulement les fichiers.
+
+Le chemin du fichier Excel est mémorisé pour la fois suivante. Seules les feuilles « RECHER_Recap_subv… » et
+« Références » sont lues, et seulement les colonnes publiques ; les colonnes sont repérées par leur en-tête.
+Les entrées « en préparation » et « soumis » ne sont pas publiées. Les corrections de titres, d'organismes et de
+références sont regroupées en tête du script (`GRANT_TITLES`, `FUNDERS`, `BIB_OVERRIDES`, `TYPOS`).
+Les autres pages (équipe, anciens membres, projets, actualités en bref) se modifient toujours à la main dans `_data/`.
+
+Prérequis, une seule fois par ordinateur :
+
+1. **Git** et **Ruby** (2.6 ou plus récent, sans gem supplémentaire).
+   Windows : [Git for Windows](https://git-scm.com/download/win) et [RubyInstaller](https://rubyinstaller.org/) (sans DevKit).
+   macOS : `xcode-select --install` fournit Git ; Ruby est inclus dans macOS (ou `brew install ruby`).
+2. Une copie du dépôt : `git clone https://github.com/labosnc/site-laboratoire-snc.git`
+   (ou *Clone repository* dans GitHub Desktop).
+3. Un accès en écriture au compte GitHub `labosnc` : sous Windows, Git ouvre le navigateur pour se connecter au
+   premier envoi ; sous macOS, le plus simple est de se connecter une fois avec GitHub Desktop ou `gh auth login`.
+
+Ne jamais placer le fichier Excel dans le dossier du site : le script refuse de le lire s'il s'y trouve.
+
 ## Filtre « moins d'un an »
 
 La page Actualités ne garde que les éléments des douze mois précédant la **compilation** du site.

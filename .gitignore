@@ -10,3 +10,6 @@ _config_netlify.yml
 # CV retiré du dépôt public
 files/CV_Edith_Durand.pdf
 _config_pages.yml
+
+# Chemin local du fichier Excel (mémorisé par scripts/mettre-a-jour.rb)
+scripts/.chemin-excel

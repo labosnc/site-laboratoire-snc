@@ -1,0 +1,5 @@
+# Lanceurs de mise à jour : fins de ligne propres à chaque système
+*.command text eol=lf
+*.sh text eol=lf
+*.rb text eol=lf
+*.bat text eol=crlf
