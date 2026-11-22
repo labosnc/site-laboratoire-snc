@@ -21,7 +21,7 @@ la charte graphique reprend la maquette Canva du laboratoire.
 | Menu et adresses des pages | `_data/nav.yml` |
 | Libellés de l'interface en français et en anglais, adresse postale | `_data/i18n.yml` |
 | Courriels, liens du département, CV | `_config.yml` |
-| CV d'Édith Durand | `files/CV_Edith_Durand.pdf` |
+| CV d'Édith Durand (masqué, voir plus bas) | `files/CV_Edith_Durand.pdf` |
 | Textes des pages (les deux langues dans le même fichier) | `_includes/pages/*.html` |
 
 Chaque page existe en deux versions : `_pages/*.html` (français) et `_pages/en/*.html` (anglais).
@@ -57,6 +57,8 @@ ne jamais les placer dans ce dépôt.
 
 ## Éléments masqués pour le moment
 
-- **CV d'Édith Durand :** dans `_config.yml`, décommenter `cv_file` et retirer le PDF de la liste `exclude`.
+- **CV d'Édith Durand :** le PDF a été retiré du dépôt (une copie est conservée hors du dépôt, dans `../CV_Edith_Durand.pdf`).
+  Pour le republier : le replacer dans `files/`, l'enlever de `.gitignore`, puis dans `_config.yml`,
+  décommenter `cv_file` et retirer le PDF de la liste `exclude`.
 - **Page Ressources et outils :** retirer `published: false` de `_pages/ressources.html` et `_pages/en/resources.html`,
   et `hidden: true` de l'entrée `tools` dans `_data/nav.yml`.

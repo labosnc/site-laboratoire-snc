@@ -6,3 +6,6 @@ vendor/
 .bundle/
 .worktrees/
 _config_netlify.yml
+
+# CV retiré du dépôt public
+files/CV_Edith_Durand.pdf
