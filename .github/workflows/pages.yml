@@ -1,0 +1,55 @@
+# Compile le site et le publie sur GitHub Pages.
+# Réglage requis une seule fois : Settings > Pages > Source : GitHub Actions.
+name: Publier sur GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  # Recompilation hebdomadaire (lundi, 6 h UTC) : retire les actualités de plus d'un an.
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+          bundler-cache: true
+
+      - id: pages
+        uses: actions/configure-pages@v5
+
+      # L'adresse et le sous-chemin viennent de GitHub : « /site-laboratoire-snc » sur labosnc.github.io,
+      # vide une fois un domaine personnalisé (labsnc.ca) configuré.
+      - name: Compiler le site
+        env:
+          JEKYLL_ENV: production
+        run: |
+          printf 'url: "%s"\nbaseurl: "%s"\n' "${{ steps.pages.outputs.origin }}" "${{ steps.pages.outputs.base_path }}" > _config_pages.yml
+          bundle exec jekyll build --config _config.yml,_config_pages.yml
+
+      - uses: actions/upload-pages-artifact@v3
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
