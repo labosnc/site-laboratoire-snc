@@ -15,6 +15,7 @@
   fr: { label: Projets en cours, url: /projets/ }
   en: { label: Current projects, url: /en/projects/ }
 - ref: tools
+  hidden: true   # page masquée pour le moment
   fr: { label: Ressources, url: /ressources/ }
   en: { label: Resources, url: /en/resources/ }
 - ref: contact

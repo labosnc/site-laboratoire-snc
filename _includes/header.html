@@ -14,7 +14,7 @@
 
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav mx-auto">
-        {% for nav in site.data.nav %}
+        {% for nav in site.data.nav %}{% if nav.hidden %}{% continue %}{% endif %}
         <li class="nav-item">
           <a class="nav-link{% if page.ref == nav.ref %} active{% endif %}" href="{{ nav[lang].url | relative_url }}"{% if page.ref == nav.ref %} aria-current="page"{% endif %}>{{ nav[lang].label }}</a>
         </li>

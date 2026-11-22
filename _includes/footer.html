@@ -21,7 +21,7 @@
     <div>
       <h2 class="footer-heading">{{ t.footer_pages }}</h2>
       <p>
-        {% for nav in site.data.nav %}<a href="{{ nav[lang].url | relative_url }}">{{ nav[lang].label }}</a><br>{% endfor %}
+        {% for nav in site.data.nav %}{% unless nav.hidden %}<a href="{{ nav[lang].url | relative_url }}">{{ nav[lang].label }}</a><br>{% endunless %}{% endfor %}
       </p>
     </div>
   </div>

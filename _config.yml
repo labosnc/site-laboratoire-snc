@@ -8,7 +8,8 @@ email: SNC@uqtr.ca
 pi_email: edith.durand@uqtr.ca
 photo: brain-hero.png
 lang: fr
-cv_file: files/CV_Edith_Durand.pdf
+# CV masqué pour le moment : décommenter la ligne et retirer le PDF de « exclude » pour le republier.
+# cv_file: files/CV_Edith_Durand.pdf
 
 # Liens (laisser vide pour masquer)
 links:
@@ -100,3 +101,4 @@ exclude:
   - vendor
   - .bundle
   - node_modules
+  - files/CV_Edith_Durand.pdf

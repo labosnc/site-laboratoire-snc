@@ -54,3 +54,9 @@ Dans Netlify, choisir *Add new site > Import an existing project*, puis ce dép�
 
 Les fichiers Excel sources contiennent des données confidentielles (salaires, évaluations d'enseignement, suivi éthique) :
 ne jamais les placer dans ce dépôt.
+
+## Éléments masqués pour le moment
+
+- **CV d'Édith Durand :** dans `_config.yml`, décommenter `cv_file` et retirer le PDF de la liste `exclude`.
+- **Page Ressources et outils :** retirer `published: false` de `_pages/ressources.html` et `_pages/en/resources.html`,
+  et `hidden: true` de l'entrée `tools` dans `_data/nav.yml`.

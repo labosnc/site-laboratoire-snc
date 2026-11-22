@@ -17,7 +17,7 @@
     <p>{{ pi.interests }}</p>
     <p><strong>{% if en %}Keywords:{% else %}Mots-clés :{% endif %}</strong> {{ pi.keywords }}</p>
     <p class="snc-links snc-links-left">
-      <a class="btn-snc" href="{{ site.cv_file | prepend: '/' | relative_url }}" download>{{ pi.cv }}</a>
+      {% if site.cv_file %}<a class="btn-snc" href="{{ site.cv_file | prepend: '/' | relative_url }}" download>{{ pi.cv }}</a>{% endif %}
       <a class="btn-snc btn-snc-outline" href="mailto:{{ site.pi_email }}">{{ site.pi_email }}</a>
     </p>
     <div class="snc-pi-lists">
