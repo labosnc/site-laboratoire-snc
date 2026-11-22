@@ -21,7 +21,7 @@
   <h2>{% if en %}Grants{% else %}Subventions{% endif %}</h2>
   <p>{% if en %}Grants awarded to the lab’s projects (titles in their original language).{% else %}Subventions obtenues pour les projets du laboratoire.{% endif %}</p>
   <div class="snc-table-wrap">
-    <table class="snc-table">
+    <table class="snc-table" data-sortable data-page-size="10" data-prev="{{ t.table_prev }}" data-next="{{ t.table_next }}" data-page="{{ t.table_page }}" data-of="{{ t.table_of }}" data-lang="{{ page.lang }}">
       <thead><tr><th scope="col">{{ t.year }}</th><th scope="col">{{ t.project }}</th><th scope="col">{{ t.funder }}</th><th scope="col">{{ t.role }}</th></tr></thead>
       <tbody>
         {% for g in site.data.grants %}

@@ -320,6 +320,24 @@ th[aria-sort="descending"] .snc-sort::after { content: ' \2193'; color: var(--ac
 .snc-card-credit { color: var(--text-muted); font-size: 0.8125rem !important; margin-bottom: var(--space-3); }
 .snc-card-link { margin-top: auto; align-self: flex-start; padding: var(--space-1) var(--space-6); }
 
+// Table de navigation des publications
+.snc-toc {
+  margin: var(--space-6) 0;
+  ul { display: flex; flex-wrap: wrap; gap: var(--space-2); list-style: none; padding: 0; margin: 0; }
+  a {
+    display: inline-block;
+    background: var(--snc-pill);
+    color: #4c2878 !important;
+    background-image: none !important;
+    border-radius: var(--radius-full);
+    padding: var(--space-1) var(--space-4);
+    font-family: 'Hedvig Letters Serif', Georgia, serif;
+    font-size: 0.9375rem;
+    transition: background-color var(--transition-fast), color var(--transition-fast);
+    &:hover, &:focus-visible { background: var(--accent); color: #fff !important; }
+  }
+}
+
 // Projets
 .snc-project-meta { font-size: 0.875rem; color: var(--text-muted); margin: var(--space-2) 0 0; }
 

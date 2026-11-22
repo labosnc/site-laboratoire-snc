@@ -7,9 +7,7 @@
 
 <nav class="snc-tiles" aria-label="{% if en %}News sections{% else %}Rubriques des actualités{% endif %}">
   <a class="snc-tile" href="#articles"><img src="{{ '/images/actu/articles.png' | relative_url }}" alt="" width="200" height="200"><span>Articles</span></a>
-  <a class="snc-tile" href="#presentations"><img src="{{ '/images/actu/presentations.png' | relative_url }}" alt="" width="200" height="200"><span>{% if en %}Presentations{% else %}Présentations{% endif %}</span></a>
-  <a class="snc-tile" href="{{ site.data.nav[5][page.lang].url | relative_url }}"><img src="{{ '/images/actu/ressources.png' | relative_url }}" alt="" width="200" height="200"><span>{% if en %}Resources and tools{% else %}Ressources et outils{% endif %}</span></a>
-</nav>
+  <a class="snc-tile" href="#presentations"><img src="{{ '/images/actu/presentations.png' | relative_url }}" alt="" width="200" height="200"><span>{% if en %}Presentations{% else %}Présentations{% endif %}</span></a></nav>
 
 <section class="snc-section">
   <h2>{% if en %}In brief{% else %}En bref{% endif %}</h2>
