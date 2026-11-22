@@ -368,7 +368,8 @@ def follow_deployment(slug, sha)
     if run
       state = run['status'] == 'completed' ? run['conclusion'] : run['status']
       if state != last
-        say "  état : #{{ 'queued' => 'en file d\'attente', 'in_progress' => 'en cours', 'success' => 'réussi', 'failure' => 'échec' }[state] || state}"
+        say "  état : #{{ 'pending' => 'en attente', 'waiting' => 'en attente', 'requested' => 'en attente', 'queued' => 'en file d\'attente',
+                      'in_progress' => 'en cours', 'success' => 'réussi', 'failure' => 'échec', 'cancelled' => 'annulé' }[state] || state}"
         last = state
       end
       if run['status'] == 'completed'
